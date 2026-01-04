@@ -82,7 +82,7 @@ public class Network {
         }
         getUser(name1).addFollowee(name2);
 
-        return true;
+        return getUser(name1).addFollowee(name2);
     }
 
     /**
@@ -152,10 +152,10 @@ public class Network {
 
     // Returns a textual description of all the users in this network, and who they follow.
     public String toString() {
-        String text = "";
+        String text = "Network: ";
         for (int i = 0; i < userCount; i++) {
             User temp = users[i];
-            text = text + temp.toString();
+            text += "\n" + temp.toString();
         }
 
         return text;
